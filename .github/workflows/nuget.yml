@@ -41,6 +41,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Pack
-      run: dotnet pack --configuration Release --output . -p:PackageVersion=$GITVERSION_ASSEMBLYSEMVER
+      run: dotnet pack --configuration Release --output . -p:PackageVersion=$GITVERSION_ASSEMBLYSEMVER -p:PackageID=Twiddy.Blazor.AdvancedBlazorSelect2
     - name: Push
       run: dotnet nuget push *.nupkg -s "https://nuget.pkg.github.com/TwiddyOBX/index.json"
